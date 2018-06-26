@@ -3,7 +3,7 @@ layout (std430, binding=2) volatile buffer shader_data
 { 
   ivec4 sumF;
   ivec4 torque;
-  uvec4 counter;
+//  uvec4 counter;
 };
 uniform vec3 center;
 
@@ -36,8 +36,8 @@ void main() {
 	atomicAddTorque(t, sigfigMult);
 	atomicAddSumF(f, sigfigMult);
 
-	counter.x += 1;
-	atomicAdd(counter.y, 1);
+//	counter.x += 1;
+//	atomicAdd(counter.y, 1);
 	color = vec4(0.5*(normalize(fragNor) +1 ), 1);
 
 }

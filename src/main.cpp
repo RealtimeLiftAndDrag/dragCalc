@@ -33,7 +33,7 @@ class drag_ssbo_data {
 public:
 	ivec4 sumF;
 	ivec4 torque;
-	uvec4 counter;
+	//uvec4 counter;
 };
 
 class Application : public EventCallbacks {
@@ -112,14 +112,14 @@ public:
         mouseMoveInitialCameraRot = camera->rot;
     }
 
-	void initGeom(const std::string& resourceDirectory) {
+	void initGeom(const std::string& resourceDirectory, string airfoilID = "0012") {
         shape = make_shared<Shape>();
-        shape->loadMesh(resourceDirectory + "/0012.obj");
+        shape->loadMesh(resourceDirectory + "/" + airfoilID + ".obj");
         shape->resize();
         shape->init();
 		drag_data.sumF = ivec4(0);
 		drag_data.torque = ivec4(0);
-		drag_data.counter = uvec4(0);
+		//drag_data.counter = uvec4(0);
 
 		glGenBuffers(1, &ssbo_drag);
 		glBindBuffer(GL_SHADER_STORAGE_BUFFER, ssbo_drag);
@@ -179,9 +179,9 @@ public:
         /**************/
         /* DRAW SHAPE */
         /**************/
-		T = translate(glm::mat4(1), glm::vec3(0, 0, -3));
+		T = translate(glm::mat4(1), glm::vec3(0, 0, -2));
 		R = rotate(mat4(1), float(PI / 2.0f), vec3(0, 1, 0));
-		vec3 center = vec3(0, 0, -3);
+		vec3 center = vec3(0, 0, -2);
 		M = T * R;
         dragShader->bind();
         dragShader->setMVP(&M[0][0], &V[0][0], &P[0][0]);
@@ -210,18 +210,18 @@ public:
 			drag_data.sumF.z,
 			drag_data.sumF.w
 		);
-		printf("Counter for frame: (%u,%u,%u,%u)\n",
-			drag_data.counter.x,
-			drag_data.counter.y,
-			drag_data.counter.z,
-			drag_data.counter.w
-		);
+		//printf("Counter for frame: (%u,%u,%u,%u)\n",
+		//	drag_data.counter.x,
+		//	drag_data.counter.y,
+		//	drag_data.counter.z,
+		//	drag_data.counter.w
+		//);
 		cout << endl << endl;
 		frame++;
 
 		drag_data.torque = vec4(0);
 		drag_data.sumF = vec4(0);
-		drag_data.counter = uvec4(0);
+		//drag_data.counter = uvec4(0);
         dragShader->unbind();
 
 		glBufferData(GL_SHADER_STORAGE_BUFFER, sizeof(drag_data), &drag_data, GL_DYNAMIC_COPY);
@@ -231,8 +231,9 @@ public:
 
 int main(int argc, char **argv) {
 	std::string resourceDir = "../resources";
+	string airfoilID;
 	if (argc >= 2) {
-		resourceDir = argv[1];
+		airfoilID = argv[1];
 	}
 
 	Application *application = new Application();
@@ -245,7 +246,10 @@ int main(int argc, char **argv) {
 
 	// Initialize scene.
 	application->init(resourceDir);
-	application->initGeom(resourceDir);
+	if(airfoilID.empty())
+		application->initGeom(resourceDir);
+	else
+		application->initGeom(resourceDir, airfoilID);
     
 	// Loop until the user closes the window.
 	while (!glfwWindowShouldClose(windowManager->getHandle())) {
