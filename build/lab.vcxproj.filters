@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\GLSL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\WindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\ext\glad\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\GLSL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Program.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\Shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\WindowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\src\tiny_obj_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\ext\glad\include\KHR\khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\ext\glad\include\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\drag.vert" />
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\norm.vert" />
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\phong.vert" />
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\drag.frag" />
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\norm.frag" />
+    <None Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\resources\phong.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DB8B538A-B8E3-3E70-86EC-60A59E3AE3F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{69F7BDE8-5D7E-343E-BEAB-E828DE86CEF6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

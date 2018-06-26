@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\Dropbox\0School\2017-2018\Spring\SeniorProject\dragCalc\build\CMakeFiles\74e786fee813a4713dc4c05d2094f710\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3D60C79B-4705-352F-8CE5-4570D674AF00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
